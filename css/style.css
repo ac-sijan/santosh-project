@@ -1,0 +1,485 @@
+/* google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+}
+
+nav{
+    background: gray;
+    padding: 5px 20px;
+}
+.navfirst ul{
+    list-style: none;
+
+}
+.navfirst li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.navfirst li a:hover{
+    cursor: pointer;
+    color: teal;
+    
+}
+
+.navfirst li{
+font-size: 18px;
+padding: 10px 5px;
+
+}
+
+.logo a{
+    font-size: 22px;
+
+}
+ 
+.button.second{
+    border-bottom:  1px lightblue solid;
+}
+
+
+/* mobile  */
+
+.navfirst{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.toggle{
+    order: 1;
+
+}
+.items.button{
+    order: 2;
+}
+.items{
+    width:100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.items.active{
+    display: block;
+}
+
+/* burger menu css */
+
+.toggle{
+    cursor: pointer;
+}
+
+.bars{
+    background: lightgray;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+
+}
+
+.bars::before,.bars::after{
+    background: lightgray;
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+    content: "";
+}
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+
+/* for responsive  */
+
+@media all and (min-width:468px){
+    .navfirst{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+    .items.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle{
+        order: 2;
+    }
+    .button.second{
+        border: 0;
+    }
+
+    .button a{
+        text-decoration: none;
+        padding: 7px 15px;
+        background: rgb(156, 224, 224);
+        border: 1px solid teal;
+        border-radius: 50em;
+    }
+
+    .button.second a{
+        background: transparent;
+    }
+
+    .button a:hover{
+        transition: all .25s;
+    }
+
+    .button:not(.second) a:hover{
+       
+        border-color: teal;
+    }
+    .button.second a:hover{
+    color: rgb(247, 223, 223);
+
+    }
+
+    .back .image img{
+        height: auto;
+        width: auto;
+    }
+}
+
+/* for normal desktop */
+
+@media all and (min-width:768px){
+    .items{
+        display: block;
+        width: auto;
+    }
+
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order: 0;
+    }
+    .items{
+        order: 1;
+    }
+
+    .button{
+        order: 2;
+    }
+
+    .navfirst li{
+        padding: 15px 10px;
+    }
+
+    .navlist li .button{
+        padding-right: 0;
+
+    }
+}
+
+
+
+/* slider css start  */
+
+
+.carousel-item img{
+    height: 30rem !important;
+    width: 100rem !important;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial !important;
+    
+}
+
+.carousel-caption h5{
+    color: white;
+    font-size: 25px;
+
+}
+
+/* background section css start */
+.back{
+    height: 100vh;
+    background-image: url('../img/home.jpg');
+    background-size: cover;
+    padding: 15px;
+    -webkit-display:flex;
+    display: flex;
+    position: relative;
+}
+
+.back.container{
+    -webkit-display:flex;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+}
+
+.back h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+   padding-top: 250px;
+    text-align: center;
+}
+
+.back h1 span{
+    color:red;
+}
+
+.back .go-down{
+
+    position: absolute;
+    bottom: 20px;
+    width: 26px;
+    height: 40px;
+    border:  1px solid white;
+    display: block;
+
+    border-radius: 4px;
+    text-align: center;
+    left: 50%;
+    margin-left: -13px;
+}
+
+
+.back .go-down .fa{
+    color: white;
+    -webkit-animation: goDowsn 1s ease infinite;
+    animation: goDown 1s ease  infinite;
+}
+
+@keyframes goDown{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+/* background css end */
+
+
+
+
+/* About section start */
+
+
+.about{
+    padding: 80px 50px;
+}
+
+.about .content{
+    -webkit-display:flex;
+    display: flex;
+}
+
+.about .content .box{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+}
+
+.about .content .box .inner {
+    background-color: gray;
+    padding: 30px;
+}
+
+
+
+.about .content .box:nth-child(2) .inner{
+    background-color: skyblue;
+}
+
+
+.about .content .box .inner .img img{
+    width: 100%;
+
+}
+
+.about .content .box .inner .text{
+    padding: 20px 15px;
+}
+
+.about .content .box .inner .text h4{
+    font-size: 18px;
+    text-decoration: center;
+    margin: 0;
+    padding: 0 0 15px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.about .content .box .inner .text p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 20px;
+    color: whitesmoke;
+    margin: 0;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container.box:hover{
+    transition: all ease-in-out .5s;
+    transform: translateY(-15px);
+    box-shadow: gray 1px solid;
+    color: red;
+}
+
+.about .container .box .text :hover{
+    
+    cursor: pointer;
+}
+
+
+
+
+ /*  Service section start  */
+
+.service{
+    padding: 80px 0px;
+     background-color: skyblue;
+}
+
+.service .content{
+    -webkit-display: flex;
+    display: flex;
+}
+
+.service .content .box{
+
+     flex: 0 0 50%;
+     max-width: 50%;
+     padding: 15px;
+}
+
+.service .content .text h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: teal;
+    text-transform: capitalize;
+    padding: 0px 0px 20px;
+    
+}
+
+.service .content .text p{
+    font-size: 18px;
+    text-decoration: center;
+    margin: 0;
+    padding: 0 0 15px;
+    
+    
+}
+
+.service .content .text .btn{
+    padding: 8px 30px;
+    background-color: rgb(15, 50, 250);
+    color: white ;
+    border: 1px solid transparent;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.service .content .text .btn:hover{
+    border: 1px solid white;
+    background-color: brown;
+
+}
+
+.service .content .accordian-container .head{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding:  12px 15px;
+    cursor: pointer;
+
+}
+
+.service .content .accordian-container .head h4{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+}
+
+.service .content .accordian-container{
+    margin-bottom: 5px;
+}
+
+.service .content .accordian-container .head .fa{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+    color:white;
+    border-radius: 50%;
+    border: 1px solid white;
+
+}
+
+.service .content .accordian-container.active .head{
+    background-color: teal;
+}
+
+.service .content .accordian-container .body{
+ display: none;
+ padding: 15px;
+ border: 1px solid teal;
+}
+
+.service .content .accordian-container.active .body{
+    display: block;
+}
+
+.service .content .accordian-container.active .body p{
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    margin: 0;
+    padding: 0 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+      /*  service section end  */ 
